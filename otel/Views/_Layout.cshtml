@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Site CSS dosyasını dahil et -->
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <h1>Otel Otomasyonu</h1>
+        <!-- Menü vb. diğer öğeler burada olabilir -->
+    </header>
+
+    <div class="container">
+        @RenderBody()  <!-- Sayfaların içeriği burada render edilir -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Otel Otomasyonu</p>
+    </footer>
+
+    <!-- Sayfalar için JS dosyaları burada dahil edilebilir -->
+</body>
+</html>

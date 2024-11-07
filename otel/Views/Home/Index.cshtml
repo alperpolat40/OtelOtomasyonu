@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+@{
+    Layout = "_Layout";
+}
+
+<h2>Hoş geldiniz!</h2>
+<p>Otelimize hoş geldiniz. En iyi konaklamayı burada bulabilirsiniz.</p>
+
+<div class="slider">
+    <h2>Otelimizin Öne Çıkan Özellikleri</h2>
+    <!-- Slider görselleri için örnek -->
+    <div class="banner-container">
+        <div class="banner-item"><img src="~/images/banner1.jpg" alt="Özellik 1" /></div>
+        <div class="banner-item"><img src="~/images/banner2.jpg" alt="Özellik 2" /></div>
+    </div>
+</div>
+
+<div class="reservation-form">
+    <h2>Rezervasyon Yap</h2>
+    <form asp-action="SearchRooms" asp-controller="Room">
+        <label>Tarih:</label>
+        <input type="date" name="checkInDate" required />
+        <label>Oda Türü:</label>
+        <select name="roomType">
+            <option>Standart</option>
+            <option>Deluxe</option>
+            <option>Süit</option>
+        </select>
+        <button type="submit">Ara</button>
+    </form>
+</div>
+
+<div class="hotel-features">
+    <h2>Otel Özellikleri</h2>
+    <ul>
+        <li>Restoran</li>
+        <li>Yüzme Havuzu</li>
+        <li>Spa</li>
+    </ul>
+</div>

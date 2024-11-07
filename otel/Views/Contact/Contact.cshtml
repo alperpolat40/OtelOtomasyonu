@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "İletişim";
+}
+
+<h2>Bizimle İletişime Geçin</h2>
+<p>Adres: Örnek Sokak, 1234, İstanbul</p>
+<p>Telefon: +90 (555) 123 4567</p>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<div>
+    <h3>Bize Ulaşın</h3>
+    <form asp-action="SendMessage" asp-controller="Contact" method="post">
+        <label>Adınız:</label>
+        <input type="text" name="name" required />
+        <label>Mesajınız:</label>
+        <textarea name="message" required></textarea>
+        <button type="submit">Gönder</button>
+    </form>
+</div>
